@@ -43,6 +43,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UFR-eN-Ple"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,6 +66,12 @@
                             <constraint firstItem="LhT-ZV-CoX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xtm-TN-gxz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonOutlet" destination="LhT-ZV-CoX" id="60m-Ey-1YX"/>
+                        <outlet property="viewGreen" destination="ERx-1K-ab2" id="LSi-v0-kkb"/>
+                        <outlet property="viewRed" destination="YkW-eY-4bE" id="87E-bW-gVz"/>
+                        <outlet property="viewYellow" destination="suS-A7-9HV" id="rT9-zI-sa2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
