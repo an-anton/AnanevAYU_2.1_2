@@ -19,20 +19,22 @@ class ViewController: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewRed.layer.cornerRadius = viewRed.frame.width / 2
         viewRed.alpha = 0.3
-        viewRed.tag = 0
+        
+        
         
         viewYellow.layer.cornerRadius = viewYellow.frame.width / 2
         viewYellow.alpha = 0.3
-        viewYellow.tag = 1
+        
         
         viewGreen.layer.cornerRadius = viewGreen.frame.width / 2
         viewGreen.alpha = 0.3
-        viewGreen.tag = 2
+        
         
         buttonOutlet.layer.cornerRadius = buttonOutlet.frame.height / 4
         
@@ -41,20 +43,31 @@ class ViewController: UIViewController {
     }
 
     @IBAction func button(_ sender: Any) {
+       
         
-        if viewRed.alpha == 0.3 {
+        if viewRed.alpha != 1 && viewYellow.alpha != 1 && viewGreen.alpha != 1 {
             buttonOutlet.setTitle("NEXT", for: .normal)
-//            viewRed.alpha = 1
-        }
+            viewRed.alpha = 1
+            viewYellow.alpha = 0.3
+            viewGreen.alpha = 0.3
             
-//        } else if viewRed.alpha == 1 {
-//            viewRed.alpha = 0.3
-//            viewYellow.alpha = 1
-//
-//        } else if viewYellow.alpha == 1 {
-//            viewYellow.alpha = 0.3
-//            viewGreen.alpha = 1
-//        }
+        } else if viewRed.alpha == 1 {
+            viewRed.alpha = 0.3
+            viewYellow.alpha = 1
+            viewGreen.alpha = 0.3
+            
+        } else if viewYellow.alpha == 1 {
+            viewRed.alpha = 0.3
+            viewGreen.alpha = 1
+            viewYellow.alpha = 0.3
+            
+        } else if viewGreen.alpha == 1 {
+            viewRed.alpha = 1
+            viewGreen.alpha = 0.3
+            viewYellow.alpha = 0.3
+        }
+        
+        
         
     }
     
