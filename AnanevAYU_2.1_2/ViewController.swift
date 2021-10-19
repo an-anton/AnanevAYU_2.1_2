@@ -43,31 +43,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func button(_ sender: Any) {
-       
         
         if viewRed.alpha != 1 && viewYellow.alpha != 1 && viewGreen.alpha != 1 {
             buttonOutlet.setTitle("NEXT", for: .normal)
             viewRed.alpha = 1
-            viewYellow.alpha = 0.3
-            viewGreen.alpha = 0.3
-            
+
         } else if viewRed.alpha == 1 {
             viewRed.alpha = 0.3
             viewYellow.alpha = 1
             viewGreen.alpha = 0.3
-            
+
         } else if viewYellow.alpha == 1 {
             viewRed.alpha = 0.3
             viewGreen.alpha = 1
             viewYellow.alpha = 0.3
-            
+
         } else if viewGreen.alpha == 1 {
             viewRed.alpha = 1
             viewGreen.alpha = 0.3
             viewYellow.alpha = 0.3
         }
-        
-        
         
     }
     
